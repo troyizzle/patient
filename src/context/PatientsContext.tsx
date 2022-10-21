@@ -7,7 +7,6 @@ import {
 } from "react";
 import { useWindowSize } from "react-use";
 import { Patient } from "../classes/Patient";
-import Confetti from "react-confetti";
 
 type PatientsProviderProps = {
   children: ReactNode;
@@ -93,14 +92,6 @@ export function PatientsProvider({ children }: PatientsProviderProps) {
       }}
     >
       <div>
-        <Confetti
-          width={width}
-          height={height}
-          run={runConfetti}
-          numberOfPieces={100}
-          recycle={false}
-          onConfettiComplete={stopConfetti}
-        />
       </div>
       {children}
     </PatientsContext.Provider>
