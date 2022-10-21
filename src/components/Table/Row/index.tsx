@@ -13,7 +13,7 @@ export default function TableRow({ patient }: TableRowProps) {
   const { removePatient, setEditPatient } = usePatients()
 
   function handleDestroyClick(patient: Patient) {
-    if (window.confirm(`Are you sure you want to delete ${patient.first_name} ${patient.last_name}?`)) {
+    if (window.confirm(`Are you sure you want to delete this patient: ${patient.first_name} ${patient.last_name}?`)) {
           fetch(
             `https://z9b896e9c-z20013b02-gtw.z730c2fa2.jvm.world/patients/${id}`,
             {
