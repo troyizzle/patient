@@ -8,7 +8,7 @@ type TableRowProps = {
 }
 
 export default function TableRow({ patient }: TableRowProps) {
-  const { id, first_name, last_name } = patient;
+  const { id, first_name, last_name, source } = patient;
   const { showToast } = useToast()
   const { removePatient, setEditPatient } = usePatients()
 
@@ -40,6 +40,7 @@ export default function TableRow({ patient }: TableRowProps) {
       <td>{id}</td>
       <td>{first_name}</td>
       <td>{last_name}</td>
+      <td>{source}</td>
       <td>
         <div className="actions">
           <Button onClick={() => handleDestroyClick(patient)} variant="danger">

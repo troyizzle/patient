@@ -24,6 +24,7 @@ export default function Main() {
                   <th>ID</th>
                   <th>First Name</th>
                   <th>Last Name</th>
+                  <th>Source</th>
                   <th></th>
                 </tr>
               </thead>

@@ -22,7 +22,7 @@ export default function PatientForm({ patient }: any) {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ patient: values }),
+        body: JSON.stringify({ patient: { ...values, source: "react" } }),
       }
     )
       .then((res) => res.json())
@@ -41,7 +41,7 @@ export default function PatientForm({ patient }: any) {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ patient: values }),
+      body: JSON.stringify({ patient: { ...values, source: "react" } }),
     })
       .then((res) => res.json())
       .then((res) => {

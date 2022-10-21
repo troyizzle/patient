@@ -62,12 +62,13 @@ export function PatientsProvider({ children }: PatientsProviderProps) {
   useEffect(() => {
     fetch("https://z9b896e9c-z20013b02-gtw.z730c2fa2.jvm.world/patients", {
       headers: {
-        Accept: "application/json",
+        'Referrer-Policy': 'no-referrer',
+        "Accept": "application/json",
         "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => setPatients(data));
 
     setIsLoading(false);
   }, []);
